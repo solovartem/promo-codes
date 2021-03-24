@@ -3,29 +3,57 @@
     {
       "id": 1,
       "title": "Siteconstructor.io",
-      "subtitle": "Description",
+      "subtitle": "This is Siteconstructor description",
       "promocode": "itpromocodes",
       "activated": false
     },
     {
       "id": 2,
       "title": "Appvision.com",
-      "subtitle": "Description",
-      "promocode": "itpromocodes",
-      "activated": false
+      "subtitle": "This is Appvision description",
+      "promocode": "differentpromocodeit",
+      "activated": true
     },
     {
       "id": 3,
       "title": "Analytics.com",
-      "subtitle": "Description",
-      "promocode": "itpromocodes",
+      "subtitle": "This is Analytics description",
+      "promocode": "SHORT25",
       "activated": false
     },
     {
       "id": 4,
       "title": "Logotype",
-      "subtitle": "Description",
+      "subtitle": "This is Logotype description",
+      "promocode": "blackfriday",
+      "activated": false
+    },
+    {
+      "id": 5,
+      "title": "Elementor.io",
+      "subtitle": "This is Elementor description",
       "promocode": "itpromocodes",
+      "activated": false
+    },
+    {
+      "id": 6,
+      "title": "Highranking.com",
+      "subtitle": "This is Highranking description",
+      "promocode": "differentpromocodeit",
+      "activated": false
+    },
+    {
+      "id": 7,
+      "title": "Alwaysbeing.com",
+      "subtitle": "This is Alwaysbeing description",
+      "promocode": "SHORT25",
+      "activated": false
+    },
+    {
+      "id": 8,
+      "title": "Realfast.io",
+      "subtitle": "This is Realfast description",
+      "promocode": "blackfriday",
       "activated": false
     }
   ],
@@ -39,6 +67,56 @@
       "id": 2,
       "type": "Payout",
       "amount": "159 465"
+    }
+  ],
+  "sections": [
+    {
+      "id": 1,
+      "name": "Dashboard",
+      "activeLogo": "/ICON_active.svg",
+      "logo": "/ICON.svg"
+    },
+    {
+      "id": 2,
+      "name": "Reports",
+      "activeLogo": "/ICON_active.svg",
+      "logo": "/ICON.svg"
+    },
+    {
+      "id": 3,
+      "name": "Statistics",
+      "activeLogo": "/ICON_active.svg",
+      "logo": "/ICON.svg"
+    },
+    {
+      "id": 4,
+      "name": "Offers",
+      "activeLogo": "/ICON_active.svg",
+      "logo": "/ICON.svg"
+    },
+    {
+      "id": 5,
+      "name": "Tools",
+      "activeLogo": "/ICON_active.svg",
+      "logo": "/ICON.svg"
+    },
+    {
+      "id": 6,
+      "name": "Developers",
+      "activeLogo": "/ICON_active.svg",
+      "logo": "/ICON.svg"
+    },
+    {
+      "id": 7,
+      "name": "Services",
+      "activeLogo": "/ICON_active.svg",
+      "logo": "/ICON.svg"
+    },
+    {
+      "id": 8,
+      "name": "Finances",
+      "activeLogo": "/ICON_active.svg",
+      "logo": "/ICON.svg"
     }
   ]
 }

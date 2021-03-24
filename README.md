@@ -1,46 +1,34 @@
-# Getting Started with Create React App
+# Features
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Project is built using CRA, Typescript and ESLint and Prettier for clean code considerations.
+- Airbnb ESLint config is used for linting rules.
+- Several components are built considering reusability and seperation of concerns. Components are located in `/components` folder.
+- A Mock API and a service layer to access to the API is implemented. API service is located in `/services/api.ts`
+- React Router is installed, configured and ready to be used.
+- Using Typescript, Unit Components and consistent naming conventions; code is structured as self-documenting.
+- Types for the data coming from Mock API are documented in `/types/types.ts` file.
 
-## Available Scripts
+# Steps To Run Locally
 
-In the project directory, you can run:
+1. Run `yarn` to install packages
+2. Run web app using `yarn start`
+3. On default, Web app runs on PORT 3000. To see the web app, you can visit http://localhost:3000. You can change PORT number from `.env` file.
 
-### `yarn start`
+# To Change the Data on Mock API
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. Change `./db.json` file manually
+2. On default, Mock server runs on PORT 3003. You can change the PORT from `.env` file. But in that case, you need to run server script with matching PORT number.
+3. You can see the available data on the browser, by simply visiting:
+   1. http://localhost:3003/services for `services` data (used in cards)
+   2. http://localhost:3003/financials for `financials` data (used on Topbar)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Task List
 
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [ x ] Develop a React App Using This Design: [here](https://www.figma.com/file/6J7oriX3K4zPLF2lrhfIvJ/front-end-test-prototype)
+- [ x ] Ability to filter services by name.
+- [ x ] Ability to reset filters.
+- [ x ] Ability to copy promo code to the clipboard.
+- [ x ] Ability to change service status to “Activated” by clicking on the “Activate bonus” button.
+- [ x ] Mock API.
+- [ x ] Should be built with webpack and
+- [ x ] Should include a README.md with instructions on how to run it locally.

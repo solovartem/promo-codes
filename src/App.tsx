@@ -1,40 +1,18 @@
-import axios from "axios"
-import React, { useEffect, useState } from "react"
+import React from "react"
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
+
 import "./App.css"
-import Card from "./components/Card/Card"
-import Filter from "./components/Filter/Filter"
-import Footer from "./components/Footer/Footer"
-import Sidebar from "./components/Sidebar/Sidebar"
-import Topbar from "./components/Topbar/Topbar"
-import { Service } from "./types/interfaces"
+import Services from "./pages/Services/Services"
 
 const App: React.FC = () => {
-  const [services, setServices] = useState<Service[]>([])
-  const [filter, setFilter] = useState("")
-
-  useEffect(() => {
-    axios.get("http://localhost:3003/services").then((res) => setServices(res.data))
-  })
-
   return (
-    <div className="App">
-      <Sidebar />
-      <div className="content">
-        <Topbar />
-        <div className="main">
-          <h1 className="headline-1">Services</h1>
-          <Filter filter={filter} setFilter={setFilter} />
-          <div className="promos">
-            {services
-              .filter((service) => service.title.toLowerCase().includes(filter))
-              .map((service) => (
-                <Card key={service.id} service={service} />
-              ))}
-          </div>
-        </div>
-        <Footer />
-      </div>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/">
+          <Services />
+        </Route>
+      </Switch>
+    </Router>
   )
 }
 

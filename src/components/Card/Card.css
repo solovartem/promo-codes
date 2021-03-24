@@ -2,6 +2,8 @@
   background-color: #fff;
   display: flex;
   justify-content: space-between;
+  border: 1px solid #e2e5ec;
+  border-radius: 6px;
   padding: 24px 32px;
   margin: 24px 0;
 }
@@ -15,6 +17,10 @@
 .card__promo {
   display: flex;
   align-items: flex-end;
+}
+
+.card__promo button {
+  cursor: pointer;
 }
 
 .card__promo-group {
@@ -62,4 +68,5 @@
 
 .card__promo-button.disabled {
   background-color: #cfd2d9;
+  cursor: default;
 }

@@ -1,20 +1,32 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
+import { NavLink } from "react-router-dom"
+import api from "../../services/api"
+import { Section } from "../../types/types"
 import SidebarItem from "../SidebarItem/SidebarItem"
+
 import "./Sidebar.css"
 
 const Sidebar: React.FC = () => {
+  const [sections, setSections] = useState<Section[]>([])
+  const [activePage, setActivePage] = useState("Services")
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await api.fetchSections()
+      setSections(result)
+    }
+    fetchData()
+  }, [])
+
   return (
     <div className="sidebar">
-      <img className="brand-logo" src="/Glyph.svg" alt="Glyph Logo" />
+      <NavLink to="/#Dashboard">
+        <img className="brand-logo" src="/Glyph.svg" alt="Glyph Logo" />
+      </NavLink>
       <div className="navbar">
-        <SidebarItem logo="/ICON.svg" title="Dashboard" />
-        <SidebarItem logo="/ICON.svg" title="Reports" />
-        <SidebarItem logo="/ICON.svg" title="Statistics" />
-        <SidebarItem logo="/ICON.svg" title="Offers" />
-        <SidebarItem logo="/ICON.svg" title="Tools" />
-        <SidebarItem logo="/ICON.svg" title="Developers" />
-        <SidebarItem logo="/ICON_active.svg" title="Services" />
-        <SidebarItem logo="/ICON.svg" title="Finances" />
+        {sections.map((section) => (
+          <SidebarItem key={section.id} section={section} activePage={activePage} setActivePage={setActivePage} />
+        ))}
       </div>
     </div>
   )

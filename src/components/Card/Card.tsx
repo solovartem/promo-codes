@@ -1,26 +1,31 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
-import axios from "axios"
-import cn from "classnames"
 import React, { useState } from "react"
-import { Service } from "../../types/interfaces"
+import cn from "classnames"
+import api from "../../services/api"
+import { Service } from "../../types/types"
 import copyToClipboard from "../../utils/copyToClipBoard"
+
 import "./Card.css"
 
 interface CardProps {
   service: Service
+  handleNotification: () => void
 }
 
-const Card: React.FC<CardProps> = ({ service }) => {
+const Card: React.FC<CardProps> = ({ service, handleNotification }) => {
   const { id, title, subtitle, promocode, activated } = service
   const [activatedState, setActivatedState] = useState(activated)
 
   const handleCopy = () => {
     copyToClipboard(promocode)
+    handleNotification()
   }
 
   const handleActivate = () => {
-    setActivatedState(true)
-    axios.patch(`http://localhost:3003/services/${id}`, { activated: true })
+    const activate = async () => {
+      await api.activateService(id)
+      setActivatedState(true)
+    }
+    activate()
   }
 
   return (
@@ -45,7 +50,7 @@ const Card: React.FC<CardProps> = ({ service }) => {
           className={cn(["card__promo-button body-lead", { disabled: activatedState }])}
           type="button"
         >
-          {activatedState ? "Already Activated" : "Activate Bonus"}
+          {activatedState ? "Activated" : "Activate Bonus"}
         </button>
       </div>
     </div>

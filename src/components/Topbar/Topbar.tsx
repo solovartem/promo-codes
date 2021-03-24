@@ -1,15 +1,21 @@
-import axios from "axios"
 import React, { useEffect, useState } from "react"
-import { Financial } from "../../types/interfaces"
+import api from "../../services/api"
+import { Financial } from "../../types/types"
 import TopbarItem from "../TopbarItem/TopbarItem"
+
 import "./Topbar.css"
 
 const Topbar: React.FC = () => {
   const [financials, setFinancials] = useState<Financial[]>([])
 
   useEffect(() => {
-    axios.get("http://localhost:3003/financials").then((res) => setFinancials(res.data))
-  })
+    const fetchData = async () => {
+      const result = await api.fetchFinancials()
+      setFinancials(result)
+    }
+    fetchData()
+  }, [])
+
   return (
     <div className="topbar">
       {financials.map((financial) => (

@@ -1,4 +1,6 @@
 import React from "react"
+import cn from "classnames"
+
 import "./Filter.css"
 
 interface FilterProps {
@@ -25,7 +27,12 @@ const Filter: React.FC<FilterProps> = ({ filter, setFilter }) => {
           onChange={handleChange}
           type="text"
         />
-        <button className="filter__form-button body-lead" type="button" onClick={handleReset}>
+        <button
+          disabled={filter === ""}
+          className={cn(["filter__form-button body-lead", { disabled: filter === "" }])}
+          type="button"
+          onClick={handleReset}
+        >
           Reset
         </button>
       </form>

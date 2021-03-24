@@ -4,6 +4,8 @@
   align-items: center;
   background-color: #1b1d29;
   width: 80px;
+  min-height: 100vh;
+  position: fixed;
 }
 
 .brand-logo {

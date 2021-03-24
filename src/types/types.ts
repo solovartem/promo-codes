@@ -11,3 +11,11 @@ export type Financial = {
   type: string
   amount: string
 }
+
+export type Section = {
+  id: number
+  name: string
+  activeLogo: string
+  logo: string
+  active: boolean
+}

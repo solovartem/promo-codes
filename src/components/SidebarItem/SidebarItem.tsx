@@ -1,17 +1,28 @@
 import React from "react"
+import { NavLink } from "react-router-dom"
+import { Section } from "../../types/types"
+
 import "./SidebarItem.css"
 
 interface SidebarItemProps {
-  logo: string
-  title: string
-  active?: string
+  section: Section
+  activePage: string
+  setActivePage: React.Dispatch<React.SetStateAction<string>>
 }
 
-const SidebarItem: React.FC<SidebarItemProps> = ({ logo, title, active }) => {
+const SidebarItem: React.FC<SidebarItemProps> = ({ section, activePage, setActivePage }) => {
+  const { name, logo, activeLogo } = section
+
+  const handleNavClick = () => {
+    setActivePage(name)
+  }
+
   return (
     <div className="sidebar-item">
-      <img className={`sidebar-item__logo ${active}`} src={logo} alt={`${title} Link`} />
-      <div className="sidebar-item__title">{title}</div>
+      <NavLink to={`/#${name}`} onClick={handleNavClick}>
+        <img className="sidebar-item__logo" src={activePage === name ? activeLogo : logo} alt={`${name} Link`} />
+        <div className="sidebar-item__title">{name}</div>
+      </NavLink>
     </div>
   )
 }

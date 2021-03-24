@@ -1,4 +1,6 @@
-const copyToClipboard = (str: string) => {
+// A helper function to copy promocode to clipboard.
+// A temporary element is created without affecting current view and removed after intended copy action.
+const copyToClipboard = (str: string): void => {
   const el = document.createElement("textarea")
   el.value = str
   el.setAttribute("readonly", "")
