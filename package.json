@@ -30,7 +30,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint './src/**/*.{ts,tsx}' --fix",
-    "server": "dotenv -- cross-var json-server --watch db.json --port %REACT_APP_SERVER_PORT%",
+    "server": "dotenv -- cross-var json-server --watch db.json --port 3003",
     "start": "yarn server & yarn dev"
   },
   "eslintConfig": {
