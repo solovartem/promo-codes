@@ -1,0 +1,7 @@
+.sidebar-item {
+  padding: 24px 0;
+}
+
+.sidebar-item__title {
+  display: none;
+}

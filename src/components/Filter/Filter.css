@@ -1,0 +1,30 @@
+.filter {
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+
+.filter__title {
+  margin-bottom: 7px;
+}
+
+.filter__form {
+  display: flex;
+  align-items: center;
+}
+
+.filter__form-input {
+  border: 1px solid #2f80ed;
+  margin-right: 8px;
+}
+
+.filter__form-input:focus {
+  outline: 2px solid #cce7ff;
+}
+
+.filter__form-button {
+  background: #f5f7fa;
+  border: 1px solid #cfd2d9;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 10px 50px;
+}

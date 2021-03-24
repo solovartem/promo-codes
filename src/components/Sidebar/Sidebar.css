@@ -1,0 +1,18 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1b1d29;
+  width: 80px;
+}
+
+.brand-logo {
+  margin-top: 20px;
+  margin-bottom: 44px;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

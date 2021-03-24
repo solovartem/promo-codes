@@ -1,0 +1,55 @@
+.card {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 32px;
+  margin: 24px 0;
+}
+
+.card__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card__form {
+  display: flex;
+  align-items: flex-end;
+}
+
+.card__form-input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.card__form-label {
+  margin-bottom: 7px;
+}
+
+.card__form-input {
+  border: 1px solid #cfd2d9;
+  margin-right: 24px;
+  width: 300px;
+  height: 48px;
+}
+
+.card__form-input-container {
+  position: relative;
+}
+
+.card__form-copy {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.card__form-button {
+  background: #0085ff;
+  color: #fff;
+  border: none;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 10px 50px;
+  width: 300px;
+  height: 48px;
+}

@@ -1,38 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Rubik:wght@300;400&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-style: normal;
+  font-weight: normal;
+  color: #262626;
+  background-color: #f5f7fa;
+}
+
 .App {
-  text-align: center;
+  display: flex;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.content {
+  width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  overflow: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+.main {
+  padding: 40px 32px;
+  flex-grow: 1;
+  justify-self: start;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Font Classes */
+.body-normal {
+  font-size: 15px;
+  line-height: 22px;
+}
+
+.body-small {
+  font-size: 13px;
+  line-height: 19px;
+  color: #7d7d7d;
+}
+
+.body-lead {
+  font-size: 19px;
+  line-height: 28px;
+}
+
+.headline-1 {
+  font-family: "Rubik";
+  font-weight: 300;
+  font-size: 39px;
+  line-height: 46px;
+}
+
+.headline-4 {
+  font-family: "Rubik";
+  font-size: 19px;
+  line-height: 26px;
+}
+
+.label {
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 0.015em;
+  text-transform: uppercase;
+  color: #7d7d7d;
+}
+
+.card-title {
+  font-weight: 300;
+  font-size: 29px;
+  line-height: 42px;
+  color: #000000;
+}
+
+.card-subtitle {
+  font-size: 15px;
+  line-height: 22px;
+  color: #7d7d7d;
+}
+
+.input-text {
+  background: #ffffff;
+  border-radius: 4px;
+  padding: 14px 17px;
+  color: #262626;
 }

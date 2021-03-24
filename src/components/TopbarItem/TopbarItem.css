@@ -1,0 +1,7 @@
+.topbar-item {
+  margin-right: 24px;
+}
+
+.topbar-item__value::after {
+  content: " $";
+}
