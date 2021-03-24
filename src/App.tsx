@@ -10,6 +10,7 @@ import { Service } from "./types/interfaces"
 
 const App: React.FC = () => {
   const [services, setServices] = useState<Service[]>([])
+  const [filter, setFilter] = useState("")
 
   useEffect(() => {
     axios.get("http://localhost:3003/services").then((res) => setServices(res.data))
@@ -22,11 +23,13 @@ const App: React.FC = () => {
         <Topbar />
         <div className="main">
           <h1 className="headline-1">Services</h1>
-          <Filter />
+          <Filter filter={filter} setFilter={setFilter} />
           <div className="promos">
-            {services.map((service) => (
-              <Card key={service.id} service={service} />
-            ))}
+            {services
+              .filter((service) => service.title.toLowerCase().includes(filter))
+              .map((service) => (
+                <Card key={service.id} service={service} />
+              ))}
           </div>
         </div>
         <Footer />
