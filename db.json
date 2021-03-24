@@ -1,0 +1,44 @@
+{
+  "services": [
+    {
+      "id": 1,
+      "title": "Siteconstructor.io",
+      "subtitle": "Description",
+      "promocode": "itpromocodes",
+      "activated": false
+    },
+    {
+      "id": 2,
+      "title": "Appvision.com",
+      "subtitle": "Description",
+      "promocode": "itpromocodes",
+      "activated": false
+    },
+    {
+      "id": 3,
+      "title": "Analytics.com",
+      "subtitle": "Description",
+      "promocode": "itpromocodes",
+      "activated": false
+    },
+    {
+      "id": 4,
+      "title": "Logotype",
+      "subtitle": "Description",
+      "promocode": "itpromocodes",
+      "activated": false
+    }
+  ],
+  "financials": [
+    {
+      "id": 1,
+      "type": "Balance",
+      "amount": "213 920"
+    },
+    {
+      "id": 2,
+      "type": "Payout",
+      "amount": "159 465"
+    }
+  ]
+}

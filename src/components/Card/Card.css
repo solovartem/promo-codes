@@ -12,38 +12,40 @@
   justify-content: space-between;
 }
 
-.card__form {
+.card__promo {
   display: flex;
   align-items: flex-end;
 }
 
-.card__form-input-group {
+.card__promo-group {
   display: flex;
   flex-direction: column;
 }
 
-.card__form-label {
+.card__promo-label {
   margin-bottom: 7px;
 }
 
-.card__form-input {
+.card__promo-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   border: 1px solid #cfd2d9;
   margin-right: 24px;
   width: 300px;
   height: 48px;
 }
 
-.card__form-input-container {
-  position: relative;
+.card__promo-container button {
+  background: none;
+  border: none;
 }
 
-.card__form-copy {
-  position: absolute;
-  top: 0;
-  right: 0;
+.card__promo-container button:focus {
+  outline: none;
 }
 
-.card__form-button {
+.card__promo-button {
   background: #0085ff;
   color: #fff;
   border: none;
@@ -52,4 +54,12 @@
   padding: 10px 50px;
   width: 300px;
   height: 48px;
+}
+
+.card__promo-button:hover {
+  background: #0078e6;
+}
+
+.card__promo-button.disabled {
+  background-color: #cfd2d9;
 }
