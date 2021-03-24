@@ -17,7 +17,7 @@
 # To Change the Data on Mock API
 
 1. Change `./db.json` file manually
-2. On default, Mock server runs on PORT 3003. You can change the PORT from `.env` file. But in that case, you need to run server script with matching PORT number.
+2. On default, Mock server runs on PORT 3003.
 3. You can see the available data on the browser, by simply visiting:
    1. http://localhost:3003/services for `services` data (used in cards)
    2. http://localhost:3003/financials for `financials` data (used on Topbar)
