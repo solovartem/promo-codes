@@ -25,7 +25,7 @@ const Services: React.FC = () => {
 
   const handleNotification = (): void => {
     store.addNotification({
-      title: "Success!",
+      title: "Copied!",
       message: "You have copied the promo code",
       type: "info",
       insert: "top",
